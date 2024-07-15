@@ -1,0 +1,6 @@
+This is a matching engine written in the nim a language.
+
+Running:
+chmod +x build.sh
+./build.sh
+./bin/matcher
