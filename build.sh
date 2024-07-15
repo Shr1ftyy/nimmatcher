@@ -1,0 +1,1 @@
+nim c -d:release -o:bin/matcher -r src/main.nim
