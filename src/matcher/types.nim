@@ -1,29 +1,27 @@
 import std/tables
 
 type
-    Side = enum Bid, Ask
+    Side* = enum Bid, Ask
 
-    Order = tuple
-        orderId: string
-        side: Side
-        price: float
-        quantity: float
+    Order* = object
+        orderId*: string
+        side*: Side
+        price*: float
+        quantity*: float
 
-    Level = tuple 
-        price: float
-        quantity: float
+    Level* = object 
+        price*: float
+        quantity*: float
 
-    OrderBook = tuple
-        ticker: string
-        orders: ref Table[string, Order]
-        levels: seq[Level]
+    OrderBook* = object
+        ticker*: string
+        orders*: ref Table[string, ref Order]
+        levels*: seq[Level]
 
-    Exchange = tuple
-        orderbooks: Table[string, OrderBook]
+    Exchange* = object
+        orderbooks*: Table[string, ref OrderBook]
 
-
-export Side
-export Order
-export Level
-export OrderBook
-export Exchange
+# proc hash*(orderbook: OrderBook): Hash = 
+#   result = orderbook.ticker.hash !& orderbook.ticker.hash
+#   result = !$result
+#   return result

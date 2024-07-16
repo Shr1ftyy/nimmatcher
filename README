@@ -1,6 +1,5 @@
-This is a matching engine written in the nim a language.
+This is a matching engine written in the nim language👑.
 
 Running:
-chmod +x build.sh
-./build.sh
-./bin/matcher
+nimble build
+./bin/nimmatcher
