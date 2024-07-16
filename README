@@ -1,5 +1,6 @@
 This is a matching engine written in the nim language👑.
 
 Running:
+nimble install
 nimble build
 ./bin/nimmatcher
